@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		522AF49E78D6880B2718F427 /* Pods_EmotionsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C0DAD87F844825962C64CD /* Pods_EmotionsUITests.framework */; };
 		6B46D8FAE6D08D0B99C76B49 /* Pods_Emotions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D9F0D8D4208D8148849053 /* Pods_Emotions.framework */; };
+		7499AACB21F52AE500B57977 /* AcceptanceStepDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7499AACA21F52AE500B57977 /* AcceptanceStepDefinitions.swift */; };
 		74D276C321F526C500AA1EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276C221F526C500AA1EA5 /* AppDelegate.swift */; };
 		74D276C521F526C500AA1EA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276C421F526C500AA1EA5 /* ViewController.swift */; };
 		74D276C821F526C500AA1EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D276C621F526C500AA1EA5 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		1DD95063D6EDF325ACF73758 /* Pods-EmotionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionsTests/Pods-EmotionsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DF0BBB8C6A5C5B17110909D /* Pods_EmotionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D9F0D8D4208D8148849053 /* Pods_Emotions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emotions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7499AACA21F52AE500B57977 /* AcceptanceStepDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceStepDefinitions.swift; sourceTree = "<group>"; };
 		74D276BF21F526C500AA1EA5 /* Emotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D276C221F526C500AA1EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74D276C421F526C500AA1EA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,8 +161,9 @@
 		74D276E121F526C600AA1EA5 /* EmotionsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				74D276E221F526C600AA1EA5 /* EmotionsUITests.swift */,
 				74D276E421F526C600AA1EA5 /* Info.plist */,
+				74D276E221F526C600AA1EA5 /* EmotionsUITests.swift */,
+				7499AACA21F52AE500B57977 /* AcceptanceStepDefinitions.swift */,
 			);
 			path = EmotionsUITests;
 			sourceTree = "<group>";
@@ -213,7 +216,7 @@
 				74D276DA21F526C600AA1EA5 /* Sources */,
 				74D276DB21F526C600AA1EA5 /* Frameworks */,
 				74D276DC21F526C600AA1EA5 /* Resources */,
-				D482C45CBF15BCA7DF1904A0 /* [CP] Embed Pods Frameworks */,
+				5F8A3402EE4EFBFC3CA856DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,6 +321,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5F8A3402EE4EFBFC3CA856DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EmotionsUITests/Pods-EmotionsUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/XCTest-Gherkin/XCTest_Gherkin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCTest_Gherkin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionsUITests/Pods-EmotionsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7D03C2872DFCF300865AC324 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,28 +363,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D482C45CBF15BCA7DF1904A0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EmotionsUITests/Pods-EmotionsUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/XCTest-Gherkin/XCTest_Gherkin.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCTest_Gherkin.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionsUITests/Pods-EmotionsUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0B0C3C4429000C135FB2791 /* [CP] Check Pods Manifest.lock */ = {
@@ -409,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74D276E321F526C600AA1EA5 /* EmotionsUITests.swift in Sources */,
+				7499AACB21F52AE500B57977 /* AcceptanceStepDefinitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
