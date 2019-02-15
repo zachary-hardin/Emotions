@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjD-Zp-oSi">
-                                <rect key="frame" x="0.0" y="218.66666666666663" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="219" width="375" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="375" id="6jF-bi-lzH"/>
                                 </constraints>
@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165.5999999999999" y="148.52216748768473"/>
+            <point key="canvasLocation" x="-151" y="240"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="D8J-s1-jj6">
@@ -56,7 +56,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zPk-VA-X7y" customClass="PageViewController" customModule="Emotions" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghx-C1-eyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973" y="149"/>
+            <point key="canvasLocation" x="1167" y="240"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ixh-dx-nvS">

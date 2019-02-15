@@ -1,6 +1,6 @@
 import UIKit
 
-let orderedPageViewControllers = [
+let pages = [
     newViewController(storyboardId: "NormalStoryboardId"),
     newViewController(storyboardId: "HappyStoryboardId"),
     newViewController(storyboardId: "SadStoryboardId"),

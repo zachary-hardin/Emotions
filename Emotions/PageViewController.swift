@@ -7,30 +7,30 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.dataSource = self
         self.delegate = self
         
-        if let firstPageViewController = orderedPageViewControllers.first {
+        if let firstPageViewController = pages.first {
             setViewControllers([firstPageViewController], direction: .forward, animated: true)
         }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedPageViewControllers.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
         let previousIndex = viewControllerIndex - 1
         
-        guard previousIndex >= 0 else { return orderedPageViewControllers.last }
-        guard orderedPageViewControllers.count > previousIndex else { return nil}
+        guard previousIndex >= 0 else { return pages.last }
+        guard pages.count > previousIndex else { return nil}
         
-        return orderedPageViewControllers[previousIndex]
+        return pages[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedPageViewControllers.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
         
         let nextIndex = viewControllerIndex + 1
-        let orderedViewControllerCount = orderedPageViewControllers.count
+        let orderedViewControllerCount = pages.count
         
-        guard orderedViewControllerCount != nextIndex else { return orderedPageViewControllers.first }
+        guard orderedViewControllerCount != nextIndex else { return pages.first }
         guard orderedViewControllerCount > nextIndex else { return nil }
         
-        return orderedPageViewControllers[nextIndex]
+        return pages[nextIndex]
     }
 }
