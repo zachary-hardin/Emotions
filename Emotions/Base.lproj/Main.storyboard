@@ -19,25 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjD-Zp-oSi">
-                                <rect key="frame" x="0.0" y="244" width="375" height="434"/>
+                                <rect key="frame" x="0.0" y="218.66666666666663" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="6jF-bi-lzH"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="zPk-VA-X7y" kind="embed" id="RNs-rO-kso"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How do you feel today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68H-CY-gH2">
-                                <rect key="frame" x="32" y="156" width="179" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68H-CY-gH2">
+                                <rect key="frame" x="24" y="68" width="327" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bjD-Zp-oSi" secondAttribute="trailing" id="8ij-cF-lcx"/>
-                            <constraint firstItem="bjD-Zp-oSi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NF5-xv-orE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bjD-Zp-oSi" secondAttribute="bottom" constant="100" id="bWp-im-WVp"/>
-                            <constraint firstItem="bjD-Zp-oSi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="mZG-wQ-hDz"/>
+                            <constraint firstItem="68H-CY-gH2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="F9C-fB-X6G"/>
+                            <constraint firstItem="bjD-Zp-oSi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="QhX-wM-pQ5"/>
+                            <constraint firstItem="bjD-Zp-oSi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VHM-rQ-muU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="68H-CY-gH2" secondAttribute="trailing" constant="24" id="bWA-te-4Yo"/>
+                            <constraint firstItem="bjD-Zp-oSi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcR-dh-YUA"/>
+                            <constraint firstItem="68H-CY-gH2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="zx6-US-QB3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
