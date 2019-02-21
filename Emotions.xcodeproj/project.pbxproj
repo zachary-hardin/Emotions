@@ -183,11 +183,11 @@
 				7434D3032217092A004F9016 /* Utilities */,
 				74D276C221F526C500AA1EA5 /* AppDelegate.swift */,
 				74D276C421F526C500AA1EA5 /* ViewController.swift */,
+				7434D301221708CD004F9016 /* PageViewController.swift */,
 				74D276C621F526C500AA1EA5 /* Main.storyboard */,
 				74D276C921F526C600AA1EA5 /* Assets.xcassets */,
 				74D276CB21F526C600AA1EA5 /* LaunchScreen.storyboard */,
 				74D276CE21F526C600AA1EA5 /* Info.plist */,
-				7434D301221708CD004F9016 /* PageViewController.swift */,
 			);
 			path = Emotions;
 			sourceTree = "<group>";
