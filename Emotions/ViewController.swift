@@ -1,20 +1,13 @@
 import UIKit
 
 protocol EmotionPageDelegate: class {
-    func updateCurrentPageIndex(index: Int)
+    func updateCurrentEmotion(index: Int)
 }
 
-class ViewController: UIViewController, EmotionPageDelegate {
-    var currentPageIndex = 0
-    var currentEmotionSet: (index: Int, type: String)!
-    
-    func updateCurrentPageIndex(index: Int) {
-        currentPageIndex = index
-        currentEmotionSet = emotions[index]
-        pageControl.currentPage = currentEmotionSet.0
-    }
-    
+class ViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    var currentEmotionSet: (index: Int, type: String)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +17,15 @@ class ViewController: UIViewController, EmotionPageDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "emotionPageViewSegue" {
-            let vc = segue.destination as! PageViewController
-            vc.emotionDelegate = self
+            let viewController = segue.destination as? PageViewController
+            viewController?.emotionDelegate = self
         }
+    }
+}
+
+extension ViewController: EmotionPageDelegate {
+    func updateCurrentEmotion(index: Int) {
+        currentEmotionSet = emotions[index]
+        pageControl.currentPage = currentEmotionSet.index
     }
 }

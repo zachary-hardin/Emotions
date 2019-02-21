@@ -1,13 +1,6 @@
 import UIKit
 
-/*
- https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/
- https://www.swiftbysundell.com/posts/delegation-in-swift
- https://medium.com/@nimjea/delegation-pattern-in-swift-4-2-f6aca61f4bf5
-*/
-
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    var currentPageIndex = 0
     var emotionDelegate: EmotionPageDelegate?
     
     override func viewDidLoad() {
@@ -20,7 +13,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             setViewControllers([firstPageViewController], direction: .forward, animated: true)
         }
     }
-        
+}
+
+extension PageViewController {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
         let previousIndex = viewControllerIndex - 1
@@ -47,13 +42,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         if completed {
             if let viewController = pageViewController.viewControllers?.first {
                 if let index = pages.index(of: viewController) {
-                    
                     if emotionDelegate != nil {
-                        emotionDelegate?.updateCurrentPageIndex(index: index)
+                        emotionDelegate?.updateCurrentEmotion(index: index)
                     }
-
-                    print("📄 \(index)")
-                    self.currentPageIndex = index
                 }
             }
         }
