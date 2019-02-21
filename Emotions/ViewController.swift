@@ -5,6 +5,7 @@ protocol EmotionPageDelegate: class {
 }
 
 class ViewController: UIViewController {
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
     var currentEmotionSet: (index: Int, type: String)!
@@ -27,5 +28,8 @@ extension ViewController: EmotionPageDelegate {
     func updateCurrentEmotion(index: Int) {
         currentEmotionSet = emotions[index]
         pageControl.currentPage = currentEmotionSet.index
+        
+        let buttonText = "I Feel \(currentEmotionSet.type)"
+        submitButton.setTitle(buttonText, for: .normal)
     }
 }

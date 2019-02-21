@@ -10,7 +10,11 @@ class AcceptanceStepDefinitions: StepDefiner {
         }
         
         step("I see the text '(.*)'") { (text: String) in
-            XCTAssert(self.app.staticTexts[text].exists)
+            XCTAssert(self.app.staticTexts[text].firstMatch.waitForExistence(timeout: 1.0))
+        }
+        
+        step("I see a button with text '(.*)'") { (text: String) in
+            XCTAssert(self.app.buttons[text].firstMatch.waitForExistence(timeout: 1.0))
         }
         
         step("I swipe left on a card") {
