@@ -1,20 +1,31 @@
-//
-//  ViewController.swift
-//  Emotions
-//
-//  Created by Zachary Hardin on 1/20/19.
-//  Copyright © 2019 Zachary Hardin. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-
+protocol EmotionPageDelegate: class {
+    func updateCurrentEmotion(index: Int)
 }
 
+class ViewController: UIViewController {
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    var currentEmotionSet: (index: Int, type: String)!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        pageControl.numberOfPages = pages.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "emotionPageViewSegue" {
+            let viewController = segue.destination as? PageViewController
+            viewController?.emotionDelegate = self
+        }
+    }
+}
+
+extension ViewController: EmotionPageDelegate {
+    func updateCurrentEmotion(index: Int) {
+        currentEmotionSet = emotions[index]
+        pageControl.currentPage = currentEmotionSet.index
+    }
+}

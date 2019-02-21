@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		522AF49E78D6880B2718F427 /* Pods_EmotionsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C0DAD87F844825962C64CD /* Pods_EmotionsUITests.framework */; };
 		6B46D8FAE6D08D0B99C76B49 /* Pods_Emotions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D9F0D8D4208D8148849053 /* Pods_Emotions.framework */; };
+		7434D302221708CD004F9016 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434D301221708CD004F9016 /* PageViewController.swift */; };
+		7434D30522170954004F9016 /* PageViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434D30422170954004F9016 /* PageViewUtilities.swift */; };
 		7499AACB21F52AE500B57977 /* AcceptanceStepDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7499AACA21F52AE500B57977 /* AcceptanceStepDefinitions.swift */; };
 		74B99E1921F5319B00CC376B /* EmotionsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B99E1821F5319B00CC376B /* EmotionsIntegrationTests.swift */; };
 		74D276C321F526C500AA1EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276C221F526C500AA1EA5 /* AppDelegate.swift */; };
@@ -50,6 +52,8 @@
 		1DD95063D6EDF325ACF73758 /* Pods-EmotionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionsTests/Pods-EmotionsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DF0BBB8C6A5C5B17110909D /* Pods_EmotionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D9F0D8D4208D8148849053 /* Pods_Emotions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emotions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7434D301221708CD004F9016 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		7434D30422170954004F9016 /* PageViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewUtilities.swift; sourceTree = "<group>"; };
 		7499AACA21F52AE500B57977 /* AcceptanceStepDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceStepDefinitions.swift; sourceTree = "<group>"; };
 		74B99E1621F5319B00CC376B /* EmotionsIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionsIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B99E1821F5319B00CC376B /* EmotionsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsIntegrationTests.swift; sourceTree = "<group>"; };
@@ -132,11 +136,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7434D3032217092A004F9016 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7434D30422170954004F9016 /* PageViewUtilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		74B99E1721F5319B00CC376B /* EmotionsIntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
-				74B99E1A21F5319B00CC376B /* Info.plist */,
 				74B99E1821F5319B00CC376B /* EmotionsIntegrationTests.swift */,
+				74B99E1A21F5319B00CC376B /* Info.plist */,
 			);
 			path = EmotionsIntegrationTests;
 			sourceTree = "<group>";
@@ -168,8 +180,10 @@
 		74D276C121F526C500AA1EA5 /* Emotions */ = {
 			isa = PBXGroup;
 			children = (
+				7434D3032217092A004F9016 /* Utilities */,
 				74D276C221F526C500AA1EA5 /* AppDelegate.swift */,
 				74D276C421F526C500AA1EA5 /* ViewController.swift */,
+				7434D301221708CD004F9016 /* PageViewController.swift */,
 				74D276C621F526C500AA1EA5 /* Main.storyboard */,
 				74D276C921F526C600AA1EA5 /* Assets.xcassets */,
 				74D276CB21F526C600AA1EA5 /* LaunchScreen.storyboard */,
@@ -461,7 +475,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7434D302221708CD004F9016 /* PageViewController.swift in Sources */,
 				74D276C521F526C500AA1EA5 /* ViewController.swift in Sources */,
+				7434D30522170954004F9016 /* PageViewUtilities.swift in Sources */,
 				74D276C321F526C500AA1EA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
