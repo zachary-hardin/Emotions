@@ -2,12 +2,12 @@ import XCTest
 @testable import Emotions
 
 class EmotionsIntegrationTests: XCTestCase {
-    var viewController: ViewController!
+    var viewController: EmotionSelectorViewController!
 
     override func setUp() {
         super.setUp()
         
-        viewController = instantiateWithoutLoad(fromStoryboard: "Main", withIdentifier: "MainStoryboardId")
+        viewController = instantiateWithoutLoad(fromStoryboard: "Main", withIdentifier: "EmotionPickerStoryboardId")
     }
 
     func testExample() {

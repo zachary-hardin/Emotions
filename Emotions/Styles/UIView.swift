@@ -1,6 +1,6 @@
 import UIKit
 
-public extension UIButton {
+public extension UIView {
     @IBInspectable
     var shadowRadius: CGFloat {
         get {

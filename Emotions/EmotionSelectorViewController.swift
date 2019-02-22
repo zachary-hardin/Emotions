@@ -4,7 +4,7 @@ protocol EmotionPageDelegate: class {
     func updateCurrentEmotion(index: Int)
 }
 
-class ViewController: UIViewController {
+class EmotionSelectorViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -22,9 +22,13 @@ class ViewController: UIViewController {
             viewController?.emotionDelegate = self
         }
     }
+    
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }
 
-extension ViewController: EmotionPageDelegate {
+extension EmotionSelectorViewController: EmotionPageDelegate {
     func updateCurrentEmotion(index: Int) {
         currentEmotionSet = emotions[index]
         pageControl.currentPage = currentEmotionSet.index

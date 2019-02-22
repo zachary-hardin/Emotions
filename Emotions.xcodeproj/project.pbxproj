@@ -13,14 +13,15 @@
 		7434D30522170954004F9016 /* PageViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434D30422170954004F9016 /* PageViewUtilities.swift */; };
 		7499AACB21F52AE500B57977 /* AcceptanceStepDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7499AACA21F52AE500B57977 /* AcceptanceStepDefinitions.swift */; };
 		74B99E1921F5319B00CC376B /* EmotionsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B99E1821F5319B00CC376B /* EmotionsIntegrationTests.swift */; };
+		74BFA39622208A5E0030B9F9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFA39522208A5E0030B9F9 /* UIView.swift */; };
+		74BFA398222092FF0030B9F9 /* EmotionSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFA397222092FF0030B9F9 /* EmotionSelectorViewController.swift */; };
+		74BFA39A222099340030B9F9 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFA399222099340030B9F9 /* DashBoardViewController.swift */; };
 		74D276C321F526C500AA1EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276C221F526C500AA1EA5 /* AppDelegate.swift */; };
-		74D276C521F526C500AA1EA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276C421F526C500AA1EA5 /* ViewController.swift */; };
 		74D276C821F526C500AA1EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D276C621F526C500AA1EA5 /* Main.storyboard */; };
 		74D276CA21F526C600AA1EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D276C921F526C600AA1EA5 /* Assets.xcassets */; };
 		74D276CD21F526C600AA1EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D276CB21F526C600AA1EA5 /* LaunchScreen.storyboard */; };
 		74D276D821F526C600AA1EA5 /* EmotionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276D721F526C600AA1EA5 /* EmotionsTests.swift */; };
 		74D276E321F526C600AA1EA5 /* EmotionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276E221F526C600AA1EA5 /* EmotionsUITests.swift */; };
-		74FA95F8221F4DD400FF57DF /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FA95F7221F4DD400FF57DF /* UIButton.swift */; };
 		969AD946BD9D59294237531F /* Pods_EmotionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0BBB8C6A5C5B17110909D /* Pods_EmotionsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,9 +60,11 @@
 		74B99E1621F5319B00CC376B /* EmotionsIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionsIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B99E1821F5319B00CC376B /* EmotionsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsIntegrationTests.swift; sourceTree = "<group>"; };
 		74B99E1A21F5319B00CC376B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74BFA39522208A5E0030B9F9 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		74BFA397222092FF0030B9F9 /* EmotionSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSelectorViewController.swift; sourceTree = "<group>"; };
+		74BFA399222099340030B9F9 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		74D276BF21F526C500AA1EA5 /* Emotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D276C221F526C500AA1EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74D276C421F526C500AA1EA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74D276C721F526C500AA1EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74D276C921F526C600AA1EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74D276CC21F526C600AA1EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,7 +75,6 @@
 		74D276DE21F526C600AA1EA5 /* EmotionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D276E221F526C600AA1EA5 /* EmotionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsUITests.swift; sourceTree = "<group>"; };
 		74D276E421F526C600AA1EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74FA95F7221F4DD400FF57DF /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		79AFA7C33621D4BB5A4BEF72 /* Pods-EmotionsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionsUITests/Pods-EmotionsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		95E5F93E70B2E77C46077B6A /* Pods-EmotionsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionsUITests/Pods-EmotionsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C8BA008AD13838DA8848DA8A /* Pods-EmotionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionsTests/Pods-EmotionsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,8 +187,9 @@
 				74FA95F9221F4DE900FF57DF /* Styles */,
 				7434D3032217092A004F9016 /* Utilities */,
 				74D276C221F526C500AA1EA5 /* AppDelegate.swift */,
-				74D276C421F526C500AA1EA5 /* ViewController.swift */,
+				74BFA397222092FF0030B9F9 /* EmotionSelectorViewController.swift */,
 				7434D301221708CD004F9016 /* PageViewController.swift */,
+				74BFA399222099340030B9F9 /* DashBoardViewController.swift */,
 				74D276C621F526C500AA1EA5 /* Main.storyboard */,
 				74D276C921F526C600AA1EA5 /* Assets.xcassets */,
 				74D276CB21F526C600AA1EA5 /* LaunchScreen.storyboard */,
@@ -217,7 +220,7 @@
 		74FA95F9221F4DE900FF57DF /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				74FA95F7221F4DD400FF57DF /* UIButton.swift */,
+				74BFA39522208A5E0030B9F9 /* UIView.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -486,10 +489,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74FA95F8221F4DD400FF57DF /* UIButton.swift in Sources */,
 				7434D302221708CD004F9016 /* PageViewController.swift in Sources */,
-				74D276C521F526C500AA1EA5 /* ViewController.swift in Sources */,
+				74BFA398222092FF0030B9F9 /* EmotionSelectorViewController.swift in Sources */,
+				74BFA39A222099340030B9F9 /* DashBoardViewController.swift in Sources */,
 				7434D30522170954004F9016 /* PageViewUtilities.swift in Sources */,
+				74BFA39622208A5E0030B9F9 /* UIView.swift in Sources */,
 				74D276C321F526C500AA1EA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
