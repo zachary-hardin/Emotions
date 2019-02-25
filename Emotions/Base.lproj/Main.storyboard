@@ -84,12 +84,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrP-dT-8jR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="outsideViewButton"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9E-0R-88i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yGA-Eq-WNC" secondAttribute="trailing" id="0wR-dr-Ln9"/>
                             <constraint firstItem="yGA-Eq-WNC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6mO-Xb-s8L"/>
                             <constraint firstItem="yGA-Eq-WNC" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="GmW-FO-FKw"/>
+                            <constraint firstAttribute="top" secondItem="JrP-dT-8jR" secondAttribute="top" id="Q8r-A0-aLq"/>
+                            <constraint firstItem="JrP-dT-8jR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WfG-Zg-ytt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JrP-dT-8jR" secondAttribute="trailing" id="gCA-4f-tPa"/>
+                            <constraint firstItem="yGA-Eq-WNC" firstAttribute="top" secondItem="JrP-dT-8jR" secondAttribute="bottom" constant="-40" id="odv-7B-cYZ"/>
                             <constraint firstItem="yGA-Eq-WNC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="sgc-dr-zEb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
