@@ -9,6 +9,12 @@ class AcceptanceStepDefinitions: StepDefiner {
             self.app.launch()
         }
         
+        step("I am on the Emotion Selector view") {
+            let button = self.app.buttons["Dashboard"].firstMatch
+            XCTAssertTrue(button.exists)
+            button.tap()
+        }
+        
         step("I see the text '(.*)'") { (text: String) in
             XCTAssert(self.app.staticTexts[text].firstMatch.waitForExistence(timeout: 1.0))
         }
@@ -39,14 +45,16 @@ class AcceptanceStepDefinitions: StepDefiner {
             
             emotionElement.swipeLeft()
         }
-        
-        step("I tap the emotion selector button") {
-            let button = self.app.buttons["Dashboard"].firstMatch
+
+        step("I tap the submit button") {
+            let button = self.app.buttons["submitButton"].firstMatch
+            XCTAssertTrue(button.exists)
             button.tap()
         }
         
-        step("I tap the submit button") {
-            let button = self.app.buttons["submitButton"].firstMatch
+        step("I tap outside of emotion selector view") {
+            let button = self.app.buttons["outsideViewButton"].firstMatch
+            XCTAssertTrue(button.exists)
             button.tap()
         }
     }
