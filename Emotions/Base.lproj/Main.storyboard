@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSS-SX-dls">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,61 +10,87 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Emotion Selector View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainStoryboardId" id="BYZ-38-t0r" customClass="ViewController" customModule="Emotions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmotionPickerStoryboardId" id="BYZ-38-t0r" customClass="EmotionSelectorViewController" customModule="Emotions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjD-Zp-oSi">
-                                <rect key="frame" x="0.0" y="139.66666666666666" width="375" height="510.33333333333337"/>
-                                <connections>
-                                    <segue destination="zPk-VA-X7y" kind="embed" identifier="emotionPageViewSegue" id="RNs-rO-kso"/>
-                                </connections>
-                            </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68H-CY-gH2">
-                                <rect key="frame" x="24" y="92" width="327" height="31.666666666666671"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="A8V-5U-7Fa">
-                                <rect key="frame" x="152" y="650" width="71" height="37"/>
-                                <color key="pageIndicatorTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.4790845513343811" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbG-US-JkF">
-                                <rect key="frame" x="16" y="706" width="343" height="48"/>
-                                <color key="backgroundColor" red="0.0" green="0.4790845513343811" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGA-Eq-WNC">
+                                <rect key="frame" x="0.0" y="80" width="375" height="732"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PopupBackground" translatesAutoresizingMaskIntoConstraints="NO" id="nM9-2r-oth">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="732"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68H-CY-gH2">
+                                        <rect key="frame" x="57" y="40" width="261" height="31.666666666666671"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjD-Zp-oSi">
+                                        <rect key="frame" x="0.0" y="87.666666666666657" width="375" height="484.33333333333337"/>
+                                        <connections>
+                                            <segue destination="zPk-VA-X7y" kind="embed" identifier="emotionPageViewSegue" id="RNs-rO-kso"/>
+                                        </connections>
+                                    </containerView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="A8V-5U-7Fa">
+                                        <rect key="frame" x="152" y="572" width="71" height="37"/>
+                                        <color key="pageIndicatorTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.0" green="0.4790845513343811" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbG-US-JkF">
+                                        <rect key="frame" x="16" y="628" width="343" height="48"/>
+                                        <color key="backgroundColor" red="0.0" green="0.4790845513343811" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="submitButton"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="N4V-98-Ap0"/>
+                                        </constraints>
+                                        <state key="normal" title="I Feel Normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eL2-oo-CJ3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="N4V-98-Ap0"/>
+                                    <constraint firstItem="bjD-Zp-oSi" firstAttribute="top" secondItem="68H-CY-gH2" secondAttribute="bottom" constant="16" id="9jG-Pi-S9v"/>
+                                    <constraint firstItem="nM9-2r-oth" firstAttribute="width" secondItem="yGA-Eq-WNC" secondAttribute="width" id="CuX-5k-ehf"/>
+                                    <constraint firstAttribute="trailing" secondItem="bjD-Zp-oSi" secondAttribute="trailing" id="Edg-oT-vDs"/>
+                                    <constraint firstAttribute="bottom" secondItem="KbG-US-JkF" secondAttribute="bottom" constant="56" id="Kiz-l8-yRO"/>
+                                    <constraint firstItem="bjD-Zp-oSi" firstAttribute="leading" secondItem="yGA-Eq-WNC" secondAttribute="leading" id="N94-TG-GL3"/>
+                                    <constraint firstItem="KbG-US-JkF" firstAttribute="leading" secondItem="yGA-Eq-WNC" secondAttribute="leading" constant="16" id="OiK-oq-yKV"/>
+                                    <constraint firstItem="nM9-2r-oth" firstAttribute="centerY" secondItem="yGA-Eq-WNC" secondAttribute="centerY" id="SOX-Ft-EV0"/>
+                                    <constraint firstItem="nM9-2r-oth" firstAttribute="height" secondItem="yGA-Eq-WNC" secondAttribute="height" id="SXj-t3-PFp"/>
+                                    <constraint firstItem="nM9-2r-oth" firstAttribute="centerX" secondItem="yGA-Eq-WNC" secondAttribute="centerX" id="V0v-YG-wNG"/>
+                                    <constraint firstItem="A8V-5U-7Fa" firstAttribute="top" secondItem="bjD-Zp-oSi" secondAttribute="bottom" id="XSC-j2-ycw"/>
+                                    <constraint firstAttribute="trailing" secondItem="KbG-US-JkF" secondAttribute="trailing" constant="16" id="caU-i6-cVw"/>
+                                    <constraint firstItem="68H-CY-gH2" firstAttribute="top" secondItem="yGA-Eq-WNC" secondAttribute="top" constant="40" id="dvt-PF-hb4"/>
+                                    <constraint firstItem="68H-CY-gH2" firstAttribute="centerX" secondItem="yGA-Eq-WNC" secondAttribute="centerX" id="nsU-pY-Auj"/>
+                                    <constraint firstItem="A8V-5U-7Fa" firstAttribute="centerX" secondItem="yGA-Eq-WNC" secondAttribute="centerX" id="uNt-F8-pQC"/>
+                                    <constraint firstItem="KbG-US-JkF" firstAttribute="top" secondItem="bjD-Zp-oSi" secondAttribute="bottom" constant="56" id="zBJ-fk-oi3"/>
                                 </constraints>
-                                <state key="normal" title="I Feel Normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
+                                        <real key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bjD-Zp-oSi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BK1-DO-q9g"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KbG-US-JkF" secondAttribute="trailing" constant="16" id="Evt-3Y-0cu"/>
-                            <constraint firstItem="68H-CY-gH2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="F9C-fB-X6G"/>
-                            <constraint firstItem="KbG-US-JkF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FNU-Bl-lx4"/>
-                            <constraint firstItem="bjD-Zp-oSi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UHn-1f-jAu"/>
-                            <constraint firstItem="bjD-Zp-oSi" firstAttribute="top" secondItem="68H-CY-gH2" secondAttribute="bottom" constant="16" id="WxR-5T-aCH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="68H-CY-gH2" secondAttribute="trailing" constant="24" id="bWA-te-4Yo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KbG-US-JkF" secondAttribute="bottom" constant="24" id="lbX-ja-k1u"/>
-                            <constraint firstItem="KbG-US-JkF" firstAttribute="top" secondItem="bjD-Zp-oSi" secondAttribute="bottom" constant="56" id="qxm-BB-4nG"/>
-                            <constraint firstItem="A8V-5U-7Fa" firstAttribute="top" secondItem="bjD-Zp-oSi" secondAttribute="bottom" id="svR-6A-Dle"/>
-                            <constraint firstItem="A8V-5U-7Fa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vUB-fd-Ijq"/>
-                            <constraint firstItem="68H-CY-gH2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="xT6-bd-lSe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yGA-Eq-WNC" secondAttribute="trailing" id="0wR-dr-Ln9"/>
+                            <constraint firstItem="yGA-Eq-WNC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6mO-Xb-s8L"/>
+                            <constraint firstItem="yGA-Eq-WNC" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="GmW-FO-FKw"/>
+                            <constraint firstItem="yGA-Eq-WNC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="sgc-dr-zEb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -75,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-151" y="240"/>
+            <point key="canvasLocation" x="-151.19999999999999" y="239.40886699507391"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="D8J-s1-jj6">
@@ -84,6 +110,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghx-C1-eyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="609" y="240"/>
+        </scene>
+        <!--Dashboard View Controller-->
+        <scene sceneID="O1k-nT-TpL">
+            <objects>
+                <viewController storyboardIdentifier="DashboardStoryboardId" id="DSS-SX-dls" customClass="DashboardViewController" customModule="Emotions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DhI-k9-NLY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9g-3o-fr9">
+                                <rect key="frame" x="150" y="391" width="75" height="30"/>
+                                <state key="normal" title="Dashboard"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="overCurrentContext" id="MND-za-frY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x9g-3o-fr9" firstAttribute="centerY" secondItem="DhI-k9-NLY" secondAttribute="centerY" id="Bdc-ik-znP"/>
+                            <constraint firstItem="x9g-3o-fr9" firstAttribute="centerX" secondItem="DhI-k9-NLY" secondAttribute="centerX" id="D5z-Vq-6Bs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m6X-gV-hH6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fnv-EF-zR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1153" y="239"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ixh-dx-nvS">
@@ -221,4 +275,7 @@
             <point key="canvasLocation" x="2489" y="901"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PopupBackground" width="292.79998779296875" height="542.4000244140625"/>
+    </resources>
 </document>
