@@ -8,12 +8,12 @@ let pages = [
     newViewController(storyboardId: "StressedStoryboardId")
 ]
 
-let emotions: [Int: (index: Int, type: String)] = [
-    0: (index: 0, type: "Normal"),
-    1: (index: 1, type: "Happy"),
-    2: (index: 2, type: "Sad"),
-    3: (index: 3, type: "Mad"),
-    4: (index: 4, type: "Stressed"),
+let emotions: [Int: String] = [
+    0: "Normal",
+    1: "Happy",
+    2: "Sad",
+    3: "Mad",
+    4: "Stressed",
 ]
 
 func newViewController(storyboardId: String) -> UIViewController {

@@ -8,7 +8,7 @@ class EmotionSelectorViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var currentEmotionSet: (index: Int, type: String)!
+    var currentEmotion: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +30,11 @@ class EmotionSelectorViewController: UIViewController {
 
 extension EmotionSelectorViewController: EmotionPageDelegate {
     func updateCurrentEmotion(index: Int) {
-        currentEmotionSet = emotions[index]
-        pageControl.currentPage = currentEmotionSet.index
+        currentEmotion = emotions[index]
+        pageControl.currentPage = index
         
-        let buttonText = "I Feel \(currentEmotionSet.type)"
+        guard let emotion = currentEmotion else { return }
+        let buttonText = "I Feel \(emotion)"
         submitButton.setTitle(buttonText, for: .normal)
     }
 }
