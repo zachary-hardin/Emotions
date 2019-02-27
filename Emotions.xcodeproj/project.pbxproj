@@ -16,6 +16,8 @@
 		74BFA39622208A5E0030B9F9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFA39522208A5E0030B9F9 /* UIView.swift */; };
 		74BFA398222092FF0030B9F9 /* EmotionSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFA397222092FF0030B9F9 /* EmotionSelectorViewController.swift */; };
 		74BFA39A222099340030B9F9 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFA399222099340030B9F9 /* DashBoardViewController.swift */; };
+		74C15FB02226F767008A81AE /* EmotionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C15FAF2226F767008A81AE /* EmotionRepository.swift */; };
+		74C15FB222270F5D008A81AE /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C15FB122270F5D008A81AE /* Emotion.swift */; };
 		74D276C321F526C500AA1EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276C221F526C500AA1EA5 /* AppDelegate.swift */; };
 		74D276C821F526C500AA1EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D276C621F526C500AA1EA5 /* Main.storyboard */; };
 		74D276CA21F526C600AA1EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D276C921F526C600AA1EA5 /* Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		74BFA39522208A5E0030B9F9 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		74BFA397222092FF0030B9F9 /* EmotionSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSelectorViewController.swift; sourceTree = "<group>"; };
 		74BFA399222099340030B9F9 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		74C15FAF2226F767008A81AE /* EmotionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionRepository.swift; sourceTree = "<group>"; };
+		74C15FB122270F5D008A81AE /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		74D276BF21F526C500AA1EA5 /* Emotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D276C221F526C500AA1EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74D276C721F526C500AA1EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +161,15 @@
 			path = EmotionsIntegrationTests;
 			sourceTree = "<group>";
 		};
+		74C15FAE2226F74F008A81AE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				74C15FB122270F5D008A81AE /* Emotion.swift */,
+				74C15FAF2226F767008A81AE /* EmotionRepository.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		74D276B621F526C500AA1EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +197,7 @@
 		74D276C121F526C500AA1EA5 /* Emotions */ = {
 			isa = PBXGroup;
 			children = (
+				74C15FAE2226F74F008A81AE /* DataSource */,
 				74FA95F9221F4DE900FF57DF /* Styles */,
 				7434D3032217092A004F9016 /* Utilities */,
 				74D276C221F526C500AA1EA5 /* AppDelegate.swift */,
@@ -254,6 +268,7 @@
 				74D276BB21F526C500AA1EA5 /* Sources */,
 				74D276BC21F526C500AA1EA5 /* Frameworks */,
 				74D276BD21F526C500AA1EA5 /* Resources */,
+				1E9121B243B002CCFE7449F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,6 +401,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E9121B243B002CCFE7449F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Emotions/Pods-Emotions-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Emotions/Pods-Emotions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5ED199C83916F45FC823D096 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,7 +531,9 @@
 				7434D302221708CD004F9016 /* PageViewController.swift in Sources */,
 				74BFA398222092FF0030B9F9 /* EmotionSelectorViewController.swift in Sources */,
 				74BFA39A222099340030B9F9 /* DashBoardViewController.swift in Sources */,
+				74C15FB222270F5D008A81AE /* Emotion.swift in Sources */,
 				7434D30522170954004F9016 /* PageViewUtilities.swift in Sources */,
+				74C15FB02226F767008A81AE /* EmotionRepository.swift in Sources */,
 				74BFA39622208A5E0030B9F9 /* UIView.swift in Sources */,
 				74D276C321F526C500AA1EA5 /* AppDelegate.swift in Sources */,
 			);

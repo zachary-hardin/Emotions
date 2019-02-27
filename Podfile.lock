@@ -1,18 +1,28 @@
 PODS:
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
   - XCTest-Gherkin (0.13.2):
     - XCTest-Gherkin/Core (= 0.13.2)
   - XCTest-Gherkin/Core (0.13.2)
 
 DEPENDENCIES:
+  - RealmSwift
   - XCTest-Gherkin
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Realm
+    - RealmSwift
     - XCTest-Gherkin
 
 SPEC CHECKSUMS:
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   XCTest-Gherkin: 5b5b9c98baed1f889893a8222c47c76557eb705b
 
-PODFILE CHECKSUM: 421d55d935205c1c20de7fa51387aee6573d6b2d
+PODFILE CHECKSUM: b4599806aa0b49ca9829aba84d3f33f2e49e9052
 
 COCOAPODS: 1.5.3

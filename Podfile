@@ -1,14 +1,17 @@
-use_frameworks!
 platform :ios, '11.0'
 
-target 'Emotions' do 
-end
+target 'Emotions' do
+  use_frameworks!
+  pod 'RealmSwift'
 
-target 'EmotionsTests' do
-end
-
-target 'EmotionsUITests' do
-  pod 'XCTest-Gherkin'
+  target 'EmotionsTests' do
+    inherit! :search_paths
+  end
+    
+  target 'EmotionsUITests' do
+    inherit! :search_paths
+    pod 'XCTest-Gherkin'
+  end
 end
 
 post_install do |installer|
