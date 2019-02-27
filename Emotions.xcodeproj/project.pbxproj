@@ -170,6 +170,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		74C15FB322272989008A81AE /* EmotionSelector */ = {
+			isa = PBXGroup;
+			children = (
+				74BFA397222092FF0030B9F9 /* EmotionSelectorViewController.swift */,
+				7434D301221708CD004F9016 /* PageViewController.swift */,
+			);
+			path = EmotionSelector;
+			sourceTree = "<group>";
+		};
 		74D276B621F526C500AA1EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -197,12 +206,11 @@
 		74D276C121F526C500AA1EA5 /* Emotions */ = {
 			isa = PBXGroup;
 			children = (
+				74C15FB322272989008A81AE /* EmotionSelector */,
 				74C15FAE2226F74F008A81AE /* DataSource */,
 				74FA95F9221F4DE900FF57DF /* Styles */,
 				7434D3032217092A004F9016 /* Utilities */,
 				74D276C221F526C500AA1EA5 /* AppDelegate.swift */,
-				74BFA397222092FF0030B9F9 /* EmotionSelectorViewController.swift */,
-				7434D301221708CD004F9016 /* PageViewController.swift */,
 				74BFA399222099340030B9F9 /* DashBoardViewController.swift */,
 				74D276C621F526C500AA1EA5 /* Main.storyboard */,
 				74D276C921F526C600AA1EA5 /* Assets.xcassets */,
