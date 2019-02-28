@@ -206,14 +206,14 @@
 		74D276C121F526C500AA1EA5 /* Emotions */ = {
 			isa = PBXGroup;
 			children = (
+				74D276C221F526C500AA1EA5 /* AppDelegate.swift */,
+				74D276C921F526C600AA1EA5 /* Assets.xcassets */,
 				74C15FB322272989008A81AE /* EmotionSelector */,
 				74C15FAE2226F74F008A81AE /* DataSource */,
 				74FA95F9221F4DE900FF57DF /* Styles */,
 				7434D3032217092A004F9016 /* Utilities */,
-				74D276C221F526C500AA1EA5 /* AppDelegate.swift */,
 				74BFA399222099340030B9F9 /* DashBoardViewController.swift */,
 				74D276C621F526C500AA1EA5 /* Main.storyboard */,
-				74D276C921F526C600AA1EA5 /* Assets.xcassets */,
 				74D276CB21F526C600AA1EA5 /* LaunchScreen.storyboard */,
 				74D276CE21F526C600AA1EA5 /* Info.plist */,
 			);
