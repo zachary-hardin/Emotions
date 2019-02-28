@@ -2,21 +2,21 @@ import XCTest
 @testable import Emotions
 
 class EmotionsIntegrationTests: XCTestCase {
+    
     var viewController: EmotionSelectorViewController!
 
     override func setUp() {
         super.setUp()
         
-        viewController = instantiateWithoutLoad(fromStoryboard: "Main", withIdentifier: "EmotionPickerStoryboardId")
+        viewController = instantiateWithoutLoad(fromStoryboard: "Main", withIdentifier: "EmotionSelectorStoryboardId")
     }
 
     func testExample() {
         viewController.loadView()
-//        viewController.render(someViewModel)
+//        viewController.render()
         
         XCTAssert(true)
     }
-
 }
 
 extension XCTestCase {

@@ -54,4 +54,12 @@ class EmotionsUITests: XCTestCase {
         And("I do not see the text 'Normal'")
         And("I do not see a button with text 'I Feel Normal'")
     }
+    
+    func testSelectedEmotionAppearsInDashboard() {
+        Given("The app is running")
+        And("I am on the Emotion Selector view")
+        And("I see the text 'Normal'")
+        When("I tap the submit button")
+        Then("I see the text 'Last Selected Emotion: Normal'")
+    }
 }

@@ -22,7 +22,7 @@
 		74D276C821F526C500AA1EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D276C621F526C500AA1EA5 /* Main.storyboard */; };
 		74D276CA21F526C600AA1EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D276C921F526C600AA1EA5 /* Assets.xcassets */; };
 		74D276CD21F526C600AA1EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D276CB21F526C600AA1EA5 /* LaunchScreen.storyboard */; };
-		74D276D821F526C600AA1EA5 /* EmotionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276D721F526C600AA1EA5 /* EmotionsTests.swift */; };
+		74D276D821F526C600AA1EA5 /* EmotionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276D721F526C600AA1EA5 /* EmotionRepositoryTests.swift */; };
 		74D276E321F526C600AA1EA5 /* EmotionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D276E221F526C600AA1EA5 /* EmotionsUITests.swift */; };
 		969AD946BD9D59294237531F /* Pods_EmotionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0BBB8C6A5C5B17110909D /* Pods_EmotionsTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,7 +74,7 @@
 		74D276CC21F526C600AA1EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74D276CE21F526C600AA1EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D276D321F526C600AA1EA5 /* EmotionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74D276D721F526C600AA1EA5 /* EmotionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsTests.swift; sourceTree = "<group>"; };
+		74D276D721F526C600AA1EA5 /* EmotionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionRepositoryTests.swift; sourceTree = "<group>"; };
 		74D276D921F526C600AA1EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D276DE21F526C600AA1EA5 /* EmotionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D276E221F526C600AA1EA5 /* EmotionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsUITests.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 		74D276D621F526C600AA1EA5 /* EmotionsTests */ = {
 			isa = PBXGroup;
 			children = (
-				74D276D721F526C600AA1EA5 /* EmotionsTests.swift */,
+				74D276D721F526C600AA1EA5 /* EmotionRepositoryTests.swift */,
 				74D276D921F526C600AA1EA5 /* Info.plist */,
 			);
 			path = EmotionsTests;
@@ -551,7 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D276D821F526C600AA1EA5 /* EmotionsTests.swift in Sources */,
+				74D276D821F526C600AA1EA5 /* EmotionRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

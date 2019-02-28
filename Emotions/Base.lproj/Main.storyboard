@@ -13,7 +13,7 @@
         <!--Emotion Selector View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="EmotionPickerStoryboardId" id="BYZ-38-t0r" customClass="EmotionSelectorViewController" customModule="Emotions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmotionSelectorStoryboardId" id="BYZ-38-t0r" customClass="EmotionSelectorViewController" customModule="Emotions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
