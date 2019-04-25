@@ -1,7 +1,6 @@
 import RealmSwift
 
 class EmotionRepository {
-    
     let realm: Realm!
     
     init(realm: Realm) {
@@ -20,10 +19,11 @@ class EmotionRepository {
         } catch let error as NSError {
             print("Error: \(error)")
         }
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
-    func getEmotions() -> [Emotion] {
+    func getAllEmotions() -> [Emotion] {
         let emotions = realm.objects(Emotion.self)
-        return Array(emotions.sorted(by: {$0.timestamp < $1.timestamp}))
+        return Array(emotions.sorted(by: {$0.timestamp > $1.timestamp}))
     }
 }

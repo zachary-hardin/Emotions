@@ -8,7 +8,6 @@ let pages = [
     newViewController(storyboardId: "StressedStoryboardId")
 ]
 
-// 💡 Maybe return EmotionType here instead of a string.
 let emotions: [Int: EmotionType] = [
     0: .Normal,
     1: .Happy,

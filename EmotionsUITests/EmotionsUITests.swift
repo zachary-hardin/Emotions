@@ -60,6 +60,6 @@ class EmotionsUITests: XCTestCase {
         And("I am on the Emotion Selector view")
         And("I see the text 'Normal'")
         When("I tap the submit button")
-        Then("I see the text 'Last Selected Emotion: Normal'")
+        Then("I see a table cell with the text: 'Normal'")
     }
 }

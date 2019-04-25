@@ -1,4 +1,5 @@
 import UIKit
+import RealmSwift
 
 protocol EmotionPageDelegate: class {
     func updateCurrentEmotion(index: Int)
@@ -8,11 +9,11 @@ class EmotionSelectorViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var currentEmotion: EmotionType!
+    var currentEmotionType = emotions[0]
+    var selectorDelegate: ModalDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         pageControl.numberOfPages = pages.count
     }
     
@@ -24,26 +25,25 @@ class EmotionSelectorViewController: UIViewController {
     }
     
     @IBAction func submitButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
+        self.dismiss(animated: true) {
+            if self.selectorDelegate != nil {
+                self.selectorDelegate?.modalDismissed()
+            }
+        }
         
-        // 💡 Write user's emotion to Realm here
-        // 💡 Use a switch statement here to determine what EmotionType to set.
+        guard let emotionType = currentEmotionType else { return }
+        let emotion = createEmotionWith(type: emotionType)
+        let repo = EmotionRepository()
+        repo.add(emotion: emotion)
     }
 }
 
-/*
- * Define what emotion is selected
- * Create instance of Emotion
- * Store Emotion
-*/
-
 extension EmotionSelectorViewController: EmotionPageDelegate {
     func updateCurrentEmotion(index: Int) {
-        currentEmotion = emotions[index]
+        currentEmotionType = emotions[index]
         pageControl.currentPage = index
         
-        guard let emotion = currentEmotion else { return }
-        let buttonText = "I Feel \(emotion.rawValue)"
-        submitButton.setTitle(buttonText, for: .normal)
+        guard let emotion = currentEmotionType else { return }
+        submitButton.setTitle("I Feel \(emotion.rawValue)", for: .normal)
     }
 }

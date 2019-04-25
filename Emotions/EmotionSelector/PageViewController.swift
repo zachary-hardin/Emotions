@@ -39,6 +39,7 @@ extension PageViewController {
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
+        // 🚨 Clean up
         if completed {
             if let viewController = pageViewController.viewControllers?.first {
                 if let index = pages.index(of: viewController) {

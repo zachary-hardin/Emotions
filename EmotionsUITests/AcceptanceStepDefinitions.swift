@@ -19,6 +19,12 @@ class AcceptanceStepDefinitions: StepDefiner {
             XCTAssert(self.app.staticTexts[text].firstMatch.waitForExistence(timeout: 1.0))
         }
         
+        step("I see a table cell with the text: '(.*)'") { (text: String) in
+            XCTAssert(
+                self.app.tables.cells.staticTexts[text].firstMatch.waitForExistence(timeout: 1.0)
+            )
+        }
+        
         step("I do not see the text '(.*)'") { (text: String) in
             XCTAssertFalse(self.app.staticTexts[text].exists)
         }

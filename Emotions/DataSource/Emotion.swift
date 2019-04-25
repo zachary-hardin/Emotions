@@ -18,3 +18,10 @@ class Emotion: Object {
         set { _emotionType = newValue.rawValue }
     }
 }
+
+func createEmotionWith(type: EmotionType) -> Emotion {
+    let emotion = Emotion()
+    emotion.emotionType = type
+    
+    return emotion
+}

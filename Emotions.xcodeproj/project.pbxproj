@@ -12,6 +12,7 @@
 		7434D302221708CD004F9016 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434D301221708CD004F9016 /* PageViewController.swift */; };
 		7434D30522170954004F9016 /* PageViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7434D30422170954004F9016 /* PageViewUtilities.swift */; };
 		7499AACB21F52AE500B57977 /* AcceptanceStepDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7499AACA21F52AE500B57977 /* AcceptanceStepDefinitions.swift */; };
+		74A62B472232D59E00903059 /* HistoricDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A62B462232D59E00903059 /* HistoricDataTableViewController.swift */; };
 		74B99E1921F5319B00CC376B /* EmotionsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B99E1821F5319B00CC376B /* EmotionsIntegrationTests.swift */; };
 		74BFA39622208A5E0030B9F9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFA39522208A5E0030B9F9 /* UIView.swift */; };
 		74BFA398222092FF0030B9F9 /* EmotionSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFA397222092FF0030B9F9 /* EmotionSelectorViewController.swift */; };
@@ -59,6 +60,7 @@
 		7434D301221708CD004F9016 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		7434D30422170954004F9016 /* PageViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewUtilities.swift; sourceTree = "<group>"; };
 		7499AACA21F52AE500B57977 /* AcceptanceStepDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceStepDefinitions.swift; sourceTree = "<group>"; };
+		74A62B462232D59E00903059 /* HistoricDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricDataTableViewController.swift; sourceTree = "<group>"; };
 		74B99E1621F5319B00CC376B /* EmotionsIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionsIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B99E1821F5319B00CC376B /* EmotionsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsIntegrationTests.swift; sourceTree = "<group>"; };
 		74B99E1A21F5319B00CC376B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,6 +154,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		74A62B452232D57C00903059 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				74BFA399222099340030B9F9 /* DashBoardViewController.swift */,
+				74A62B462232D59E00903059 /* HistoricDataTableViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		74B99E1721F5319B00CC376B /* EmotionsIntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,13 +217,13 @@
 		74D276C121F526C500AA1EA5 /* Emotions */ = {
 			isa = PBXGroup;
 			children = (
+				74A62B452232D57C00903059 /* Dashboard */,
 				74D276C221F526C500AA1EA5 /* AppDelegate.swift */,
 				74D276C921F526C600AA1EA5 /* Assets.xcassets */,
 				74C15FB322272989008A81AE /* EmotionSelector */,
 				74C15FAE2226F74F008A81AE /* DataSource */,
 				74FA95F9221F4DE900FF57DF /* Styles */,
 				7434D3032217092A004F9016 /* Utilities */,
-				74BFA399222099340030B9F9 /* DashBoardViewController.swift */,
 				74D276C621F526C500AA1EA5 /* Main.storyboard */,
 				74D276CB21F526C600AA1EA5 /* LaunchScreen.storyboard */,
 				74D276CE21F526C600AA1EA5 /* Info.plist */,
@@ -541,6 +552,7 @@
 				74BFA39A222099340030B9F9 /* DashBoardViewController.swift in Sources */,
 				74C15FB222270F5D008A81AE /* Emotion.swift in Sources */,
 				7434D30522170954004F9016 /* PageViewUtilities.swift in Sources */,
+				74A62B472232D59E00903059 /* HistoricDataTableViewController.swift in Sources */,
 				74C15FB02226F767008A81AE /* EmotionRepository.swift in Sources */,
 				74BFA39622208A5E0030B9F9 /* UIView.swift in Sources */,
 				74D276C321F526C500AA1EA5 /* AppDelegate.swift in Sources */,

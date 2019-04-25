@@ -46,24 +46,27 @@ class EmotionsTests: XCTestCase {
         XCTAssertEqual(firstEmotion.notes, "foo")
     }
     
+    func testGetEmotionsWhenEmpty() {
+        let emotions = repository.getAllEmotions()
+        XCTAssertEqual(emotions.count, 0)
+    }
+    
     func testGetEmotionsRetrievesEmotion() {
-        setUpRealm([sadEmotion, happyEmotion])
-        let emotions = repository.getEmotions()
+        setUpRealmWith(sadEmotion, happyEmotion)
+        let emotions = repository.getAllEmotions()
         
         XCTAssertEqual(emotions.count, 2)
     }
     
     func testGetEmotionsSortsChronologically() {
-        setUpRealm([sadEmotion, happyEmotion])
-        let emotions = repository.getEmotions()
+        setUpRealmWith(happyEmotion, sadEmotion)
+        let emotions = repository.getAllEmotions()
         
-        XCTAssertEqual(emotions.first!.emotionType, .Happy)
-        XCTAssertEqual(emotions.last!.emotionType, .Sad)
+        XCTAssertEqual(emotions.first!.emotionType, .Sad)
+        XCTAssertEqual(emotions.last!.emotionType, .Happy)
     }
-    
-    
 
-    func setUpRealm(_ emotions: [Emotion]) {
+    func setUpRealmWith(_ emotions: Emotion...) {
         for emotion in emotions {
             try! testRealm.write {
                 self.testRealm.add(emotion)

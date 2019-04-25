@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSS-SX-dls">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSS-SX-dls">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -135,21 +135,62 @@
                                 <rect key="frame" x="150" y="391" width="75" height="30"/>
                                 <state key="normal" title="Dashboard"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="overCurrentContext" id="MND-za-frY"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="dashboardToSelectorSegue" modalPresentationStyle="overFullScreen" id="MND-za-frY"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-1t-gHz">
+                                <rect key="frame" x="0.0" y="471" width="375" height="307"/>
+                                <connections>
+                                    <segue destination="taY-wq-iRl" kind="embed" identifier="historicDataViewSegue" id="eKv-f8-ev6"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="x9g-3o-fr9" firstAttribute="centerY" secondItem="DhI-k9-NLY" secondAttribute="centerY" id="Bdc-ik-znP"/>
                             <constraint firstItem="x9g-3o-fr9" firstAttribute="centerX" secondItem="DhI-k9-NLY" secondAttribute="centerX" id="D5z-Vq-6Bs"/>
+                            <constraint firstItem="m6X-gV-hH6" firstAttribute="trailing" secondItem="aFa-1t-gHz" secondAttribute="trailing" id="J66-Kc-Pmw"/>
+                            <constraint firstItem="aFa-1t-gHz" firstAttribute="leading" secondItem="m6X-gV-hH6" secondAttribute="leading" id="PjY-rB-PbJ"/>
+                            <constraint firstItem="aFa-1t-gHz" firstAttribute="top" secondItem="x9g-3o-fr9" secondAttribute="bottom" constant="50" id="ryP-7g-Nnu"/>
+                            <constraint firstItem="m6X-gV-hH6" firstAttribute="bottom" secondItem="aFa-1t-gHz" secondAttribute="bottom" id="yGk-hW-r0n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m6X-gV-hH6"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnv-EF-zR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1153" y="239"/>
+            <point key="canvasLocation" x="-2583" y="239"/>
+        </scene>
+        <!--Historic Data Table View Controller-->
+        <scene sceneID="cdv-7m-RpR">
+            <objects>
+                <tableViewController storyboardIdentifier="HistoricDataStoryboard" id="taY-wq-iRl" customClass="HistoricDataTableViewController" customModule="Emotions" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S03-DU-mKH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="t9u-QQ-OOK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t9u-QQ-OOK" id="aEC-Yw-iVV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="taY-wq-iRl" id="CEE-LT-k6I"/>
+                            <outlet property="delegate" destination="taY-wq-iRl" id="Biv-PK-hab"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="historyTableView" destination="S03-DU-mKH" id="09e-VI-Ggx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FsV-jR-Sf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2583" y="777"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ixh-dx-nvS">
@@ -288,6 +329,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PopupBackground" width="292.79998779296875" height="542.4000244140625"/>
+        <image name="PopupBackground" width="1220" height="2260"/>
     </resources>
 </document>
